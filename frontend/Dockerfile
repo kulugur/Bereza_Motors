@@ -1,7 +1,7 @@
 FROM node:20-alpine as builder
 WORKDIR /usr/src/app
 COPY . .
-RUN npm install --silent
+RUN npm install --force
 
 RUN ng build --prod
 
