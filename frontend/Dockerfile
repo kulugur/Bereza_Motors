@@ -1,4 +1,4 @@
-FROM node:3.alpine as build
+FROM node:alpine as build
 COPY packege.json packege.json
 RUN npm install
 COPY . .
