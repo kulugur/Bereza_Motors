@@ -7,7 +7,7 @@ COPY . .
 RUN npm run build
 
 FROM nginx:stable-alpine
-COPY --from=build-stage/dist /use/share/nginx/html
+COPY --from=build-stage /dist /use/share/nginx/html
 COPY --from=build-stage nginx.conf /etc/nginx/confg.d/default.conf
 EXPOSE 3000
 CMD ["nginx", "-g","daemon off;" ]
