@@ -1,6 +1,6 @@
 FROM node:20.18.0-alpine as builder
 
-COPY package.json package.json
+COPY package*.json .env ./
 
 RUN npm install 
 COPY . .
