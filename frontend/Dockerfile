@@ -6,7 +6,7 @@ RUN npm install
 
 RUN npm fund
 COPY . .
-RUN npm run build 
+RUN ng build --configuration=production
 
 FROM nginx:alpine
 
