@@ -3,8 +3,10 @@ WORKDIR /usr/src/app
 COPY package.json package.json
 RUN npm config set legacy-peer-deps true
 RUN npm install 
+
+RUN npm fund
 COPY . .
-RUN npm run build --prod
+RUN npm run build 
 
 FROM nginx:alpine
 
