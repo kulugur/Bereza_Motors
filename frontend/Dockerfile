@@ -2,7 +2,7 @@ FROM node:20-alpine as builder
 
 COPY package*.json .env ./
 
-RUN npm install 
+RUN npm install --force
 COPY . .
 
 RUN npm run build
