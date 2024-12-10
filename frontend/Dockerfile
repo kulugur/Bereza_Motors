@@ -4,9 +4,9 @@ COPY package.json package.json
 RUN npm config set legacy-peer-deps true
 RUN npm install 
 
-RUN npm fund
+
 COPY . .
-RUN ng build --configuration=production
+RUN npm run build --configuration=production
 
 FROM nginx:alpine
 
