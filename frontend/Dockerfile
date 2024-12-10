@@ -1,14 +1,14 @@
 FROM node:20-alpine as builder
-
-COPY package*.json .env ./
-
-RUN npm install --force
+WORKDIR /usr/src/app
+COPY package.json package.json
+RUN npm install --silent
 COPY . .
+RUN ng build --prod
 
-RUN npm run build
-
-FROM nginx:stable-alpine
-COPY --from=builder /dist /usr/share/nginx/html
+FROM nginx:alpine
+LABEL author="Preston Lamb"
+COPY --from=builder /usr/src/app/dist /usr/share/nginx/html
 COPY --from=builder nginx.conf /etc/nginx/confg.d/default.conf
-EXPOSE 3000
-CMD ["nginx", "-g","daemon off;" ]
+EXPOSE 80 443
+CMD [ "nginx", "-g", "daemon off;" ]
+
