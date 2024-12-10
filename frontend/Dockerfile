@@ -1,8 +1,8 @@
 FROM node:20-alpine as builder
 WORKDIR /usr/src/app
-COPY package.json package.json
-RUN npm install --silent
 COPY . .
+RUN npm install --silent
+
 RUN ng build --prod
 
 FROM nginx:alpine
