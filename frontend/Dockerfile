@@ -1,7 +1,7 @@
 FROM node:20.18.0-alpine as build
 COPY package.json package.json
 COPY . .
-RUN npm --verbose install
+RUN npm install --force
 
 
 RUN npm run build
