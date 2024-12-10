@@ -2,6 +2,12 @@
   "name": "bereza_motors",
   "version": "0.1.0",
   "private": true,
+  "overrides": {
+    "next": {
+      "react": "^19.0.0-rc-a960b92c-20240819",
+      "react-dom": "^19.0.0-rc-a960b92c-20240819"
+    }
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
