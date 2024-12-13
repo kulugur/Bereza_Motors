@@ -115,7 +115,7 @@ export default function  fetcBrend(){
                         value={al.key}
                         className="lf--submit"
                         onClick={setBasket_key}
-                        > В корзину</button>
+                        > В корзину</button >
                         
                     </div> 
 
