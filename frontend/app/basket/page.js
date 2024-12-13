@@ -102,7 +102,7 @@ return(<div className='contener_detal' > {basket &&(<div className='baket_naw'>
     </Link>  
    </div>
    <div className='baket'> 
-    <div  >
+    <div className='contener_flex' >
         <p>Корзина</p>
         <p
         className='baket_button'
@@ -120,6 +120,10 @@ return(<div className='contener_detal' > {basket &&(<div className='baket_naw'>
         
    </div>
   </div>)}
+  {!basket &&(<div className="exit"><Link  href="/">
+    <img src="../img/exit.png" alt=""width="24" height="24"/>
+    </Link>  
+   </div>)}
      <div className="padding_2vh ">
   {basket && (basket.map(al =>(al.quantity != 0 && (<div key={al.key} className='detail'>
            <h1 key={al.key + 'Manufacturer'} >{al.Manufacturer}</h1>

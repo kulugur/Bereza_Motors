@@ -441,6 +441,9 @@ img {
 
 
 }
+.baket_button:hover{
+    color: #b39e1c;
+	}
 .counter__plus {
 	
 	cursor: pointer;

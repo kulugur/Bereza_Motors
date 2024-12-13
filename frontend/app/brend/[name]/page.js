@@ -93,6 +93,10 @@ export default function  fetcBrend(){
             
        </div>
       </div>)}
+      {!basket &&(<div className="exit"><Link  href="/">
+    <img src="../img/exit.png" alt=""width="24" height="24"/>
+    </Link>  
+   </div>)}
       <div className="padding_2vh "> 
     {brend && (brend.map(al =>(<div key={al.key} className='detail'>
              <h1 key={al.key + 'Manufacturer'} >{al.Manufacturer}</h1>
