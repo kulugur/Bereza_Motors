@@ -103,7 +103,7 @@ return(<div className='contener_detal' > {basket &&(<div className='baket_naw'>
    </div>
    <div className='baket'> 
     <div  >
-        <p>Карзина</p>
+        <p>Корзина</p>
         <p
         className='baket_button'
               type="submit"

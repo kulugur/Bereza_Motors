@@ -85,7 +85,7 @@ export default function  fetcBrend(){
         </Link>  
        </div>
        <div className='baket'>
-            <p>Карзина</p>
+            <p>Корзина</p>
             <div className='contener_flex' >
             <Link   href="../basket"><img className='baket_img' src="../img/basket.png" alt=""width="24" height="24"/></Link>
             <p>{sum}</p>
@@ -115,7 +115,7 @@ export default function  fetcBrend(){
                         value={al.key}
                         className="lf--submit"
                         onClick={setBasket_key}
-                        > В карзину</button>
+                        > В корзину</button>
                         
                     </div> 
 
