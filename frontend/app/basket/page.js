@@ -127,8 +127,9 @@ return(<div className='contener_detal' > {basket &&(<div className='baket_naw'>
      <div className="padding_2vh ">
   {basket && (basket.map(al =>(al.quantity != 0 && (<div key={al.ID} className='detail'>
            <h1 key={al.ID + 'Manufacturer'} >{al.Наименование}</h1>
-            <p key={al.ID + 'Model' }>{ al.Марка}</p>
+           <h4 key={al.ID + 'num' }>OEM-{ al.Номер}</h4>
             <p key={al.ID + 'Product_name' }>{ al.Примечание}</p>
+            
              <p key={al.ID + 'Price'}>{ al.Цена} Руб</p>
 
              <div className='foto'>

@@ -100,8 +100,9 @@ export default function  fetcBrend(){
       <div className="padding_2vh "> 
     {brend && (brend.map(al =>(<div key={al.ID} className='detail'>
              <h1 key={al.ID + 'Manufacturer'} >{al.Наименование}</h1>
-              <p key={al.ID + 'Model' }>{ al.Марка}</p>
+             <h4 key={al.ID + 'num' }>OEM-{ al.Номер}</h4>
               <p key={al.ID + 'Product_name' }>{ al.Примечание}</p>
+              
                <h3 key={al.ID + 'Price'}>{ al.Цена} Руб</h3>
               <div className='foto'>
               {al.Фотография.map(foto =>( <Link  key={foto + 'link'} href={foto}><img src={foto} ></img></Link>))}

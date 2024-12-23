@@ -33,8 +33,18 @@ export default function  MySearchComponent() {
        
         const results = brend.filter(it =>{
             if(it.Наименование != null){
-                return it.Наименование.toLowerCase().indexOf(value.toLowerCase()) !== -1
+                const num_detal = it.Номер.toLowerCase().indexOf(value.toLowerCase()) !== -1
+                const detal = it.Наименование.toLowerCase().indexOf(value.toLowerCase()) !== -1
+               
+                if ( num_detal != null){
+                  return num_detal
+                }
+                else{
+                  return detal
+                }
             }
+            
+          
        })
             
         
