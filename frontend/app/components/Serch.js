@@ -35,8 +35,8 @@ export default function  MySearchComponent() {
             if(it.Наименование != null){
                 const num_detal = it.Номер.toLowerCase().indexOf(value.toLowerCase()) !== -1
                 const detal = it.Наименование.toLowerCase().indexOf(value.toLowerCase()) !== -1
-               
-                if ( num_detal != null){
+                console.log(num_detal,detal)
+                if ( num_detal){
                   return num_detal
                 }
                 else{
@@ -58,7 +58,7 @@ return(
         
         <form>
             {res && (console.log(res))}
-            <input className="nav_search search" onChange={hendlerSerch} type="search" name="text"  placeholder="Введите"/>
+            <input className="nav_search search" onChange={hendlerSerch} type="search" name="text"  placeholder="Введите деталь или номер OEM"/>
   			
             <div className='serch_res'>{res && (res.map(al =>(<Link href={"./Name_without_use/"+al.ID}
               key={al.ID}  >{al.Наименование +" - "+ al.Модель}</Link>)))}
