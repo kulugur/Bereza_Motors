@@ -32,8 +32,8 @@ export default function  MySearchComponent() {
        else{
        
         const results = brend.filter(it =>{
-            if(it.Name_without_use != null){
-                return it.Name_without_use.toLowerCase().indexOf(value.toLowerCase()) !== -1
+            if(it.Наименование != null){
+                return it.Наименование.toLowerCase().indexOf(value.toLowerCase()) !== -1
             }
        })
             
@@ -50,8 +50,8 @@ return(
             {res && (console.log(res))}
             <input className="nav_search search" onChange={hendlerSerch} type="search" name="text"  placeholder="Введите"/>
   			
-            <div className='serch_res'>{res && (res.map(al =>(<Link href={"./Name_without_use/"+al.key}
-              key={al.key}  >{al.Name_without_use +" - "+ al.Model}</Link>)))}
+            <div className='serch_res'>{res && (res.map(al =>(<Link href={"./Name_without_use/"+al.ID}
+              key={al.ID}  >{al.Наименование +" - "+ al.Модель}</Link>)))}
               </div>
              
 

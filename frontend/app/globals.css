@@ -507,7 +507,23 @@ img {
 			
 			background-color: #232e49;
 		}
+	.baket p{
+	
+			padding:1vh 1vh 0vh 3vh;
+			margin: 0;
+		}	
+		.nav_emai {
+			margin-bottom: 1vh;
+			margin-top: 2vh;
+			text-decoration: none;
+			float: right;
+			padding-right: 0; 
+			color: #dfc741;
+		}	
 }
 .padding_2vh{
 padding-top: 14vh;
+}
+.foto{
+	display: flex;
 }

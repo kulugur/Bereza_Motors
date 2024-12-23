@@ -88,14 +88,14 @@ def get_brands():
 def get_brand(brend: str):
     brend = brend.title()
     print(brend)
-    with open('sample.json', encoding='utf-8') as f:
+    with open('Output.json', encoding='utf-8') as f:
         file_content = f.read()
         templates = json.loads(file_content)
         detail = []
 
         for brands in templates:
 
-            if brands["Manufacturer"] == brend or brend == 'All':
+            if brands["Марка"] == brend or brend == 'All':
 
                 detail.append(brands)
 

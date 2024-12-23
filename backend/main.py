@@ -1,3 +1,5 @@
+import aiofiles
+import asyncio
 from fastapi_users import  FastAPIUsers
 
 from auth.auth import auth_backend
@@ -5,7 +7,7 @@ from auth.manager import get_user_manager
 from auth.shemas import UserRead, UserCreate, UserUpdate
 from router import router as user_router
 
-from fastapi import FastAPI, Depends, Body
+from fastapi import FastAPI, Depends, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 from fastapi.middleware.httpsredirect import HTTPSRedirectMiddleware
@@ -60,7 +62,12 @@ app.include_router(
 current_active_user = fastapi_users.current_user(active=True)
 current_user = fastapi_users.current_user()
 
-
+# @app.post("/file/upload-file")
+# def upload_file(file: UploadFile):
+#     async with aiofiles.open(file.filename, 'wb') as out_file:
+#             content =await file.read()  # async read
+#             await out_file.write(content)  # async write
+#     return file
 
 @app.post("/protected-route")
 def protected_route(user: User = Depends(current_user)):

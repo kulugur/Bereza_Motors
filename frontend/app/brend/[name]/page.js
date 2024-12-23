@@ -98,13 +98,16 @@ export default function  fetcBrend(){
     </Link>  
    </div>)}
       <div className="padding_2vh "> 
-    {brend && (brend.map(al =>(<div key={al.key} className='detail'>
-             <h1 key={al.key + 'Manufacturer'} >{al.Manufacturer}</h1>
-              <p key={al.key + 'Model' }>{ al.Model}</p>
-              <p key={al.key + 'Product_name' }>{ al.Product_name}</p>
-               <h3 key={al.key + 'Price'}>{ al.Price} Руб</h3>
-               
-               <Link  key={al.key + 'link'} href={al.Image}><img src={al.Image}  width="150" height="200"></img></Link>
+    {brend && (brend.map(al =>(<div key={al.ID} className='detail'>
+             <h1 key={al.ID + 'Manufacturer'} >{al.Наименование}</h1>
+              <p key={al.ID + 'Model' }>{ al.Марка}</p>
+              <p key={al.ID + 'Product_name' }>{ al.Примечание}</p>
+               <h3 key={al.ID + 'Price'}>{ al.Цена} Руб</h3>
+              <div className='foto'>
+              {al.Фотография.map(foto =>( <Link  key={foto + 'link'} href={foto}><img src={foto} ></img></Link>))}
+              
+                </div> 
+              
             
                     
                     <div className='contener_flex widh_35'   key={al}>
@@ -116,7 +119,7 @@ export default function  fetcBrend(){
                       > Купить</button>
                       <button
                         type="button"
-                        value={al.key}
+                        value={al.ID}
                         className="lf--submit"
                         onClick={setBasket_key}
                         > В корзину</button >

@@ -17,14 +17,14 @@ def basket_json(email: str):
     return basket
 
 def set_basket_json(basket, email, key):
-    with open('sample.json', encoding='utf-8') as f:
+    with open('Output.json', encoding='utf-8') as f:
         file_content = f.read()
         templates = json.loads(file_content)
     for detal in templates:
         detal["quantity"] = 1
-        if detal["key"] == key:
+        if detal["ID"] == key:
             for basket_detal in basket:
-                if basket_detal["key"] == key:
+                if basket_detal["ID"] == key:
                     basket_detal["quantity"] += 1
                     with open(f"Basket/{email}.json", "w", encoding="utf-8") as file:
                         json.dump(basket, file, ensure_ascii=False, indent=4)

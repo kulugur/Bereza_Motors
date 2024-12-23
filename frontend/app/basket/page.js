@@ -89,7 +89,7 @@ setBasket(json);
   if (basket){
 
     
-    let oneDetal = basket.map(detal=>(+(detal.quantity * detal.Price)))
+    let oneDetal = basket.map(detal=>(+(detal.quantity * detal.Цена)))
     oneDetal.map((item) => allPrice += item)    
   
   let new_basket = basket.map(res =>+Number(res.quantity))
@@ -125,34 +125,37 @@ return(<div className='contener_detal' > {basket &&(<div className='baket_naw'>
     </Link>  
    </div>)}
      <div className="padding_2vh ">
-  {basket && (basket.map(al =>(al.quantity != 0 && (<div key={al.key} className='detail'>
-           <h1 key={al.key + 'Manufacturer'} >{al.Manufacturer}</h1>
-            <p key={al.key + 'Model' }>{ al.Model}</p>
-            <p key={al.key + 'Product_name' }>{ al.Product_name}</p>
-             <p key={al.ke + 'Price'}>{ al.Price} Руб</p>
+  {basket && (basket.map(al =>(al.quantity != 0 && (<div key={al.ID} className='detail'>
+           <h1 key={al.ID + 'Manufacturer'} >{al.Наименование}</h1>
+            <p key={al.ID + 'Model' }>{ al.Марка}</p>
+            <p key={al.ID + 'Product_name' }>{ al.Примечание}</p>
+             <p key={al.ID + 'Price'}>{ al.Цена} Руб</p>
 
-             <Link  key={al.key + 'link'} href={al.Image}><img src={al.Image}  width="150" height="200"></img></Link>
+             <div className='foto'>
+              {al.Фотография.map(foto =>( <Link  key={foto + 'link'} href={foto}><img src={foto} ></img></Link>))}
+              
+                </div> 
                   
              <div className='contener_flex widh_35'   key={al+"1"}>
                 <button  className="counter__minus"
                    type="button"
-                        value={al.key}
+                        value={al.ID}
                         
                         onClick={setBasket_minus}>-</button > 
                         <div  className='counter__p'> <p>{al.quantity}</p></div>
                
                 <button
                         type="button"
-                        value={al.key}
+                        value={al.ID}
                         className="counter__plus"
                         onClick={setBasket_plus}
                         >+</button>
                 </div>
-                <p>{"Цена-"+ (al.quantity *  Number(al.Price))}</p>
+                <p>{"Цена-"+ (al.quantity *  Number(al.Цена))}</p>
                   <div className='contener_flex widh_35'   key={al+"2"}>
               
                   <button
-                   key={al.key + 'button'}
+                   key={al.ID + 'button'}
                       type="submit"
                       className="lf--submit"
                       
