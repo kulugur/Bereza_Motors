@@ -49,11 +49,11 @@ def set_basket(key: str, user: User = Depends(current_user)):
     set_basket_json(basket, user.email, key)
 @router.get("/Name_without_use/{key}")
 def get_detal(key: str):
-    with open('sample.json', encoding='utf-8') as f:
+    with open('Output.json', encoding='utf-8') as f:
         file_content = f.read()
         templates = json.loads(file_content)
     for detal in templates:
-        if detal["key"] == key:
+        if detal["ID"] == key:
             return detal
     return []
 @router.get("/brands")
@@ -86,7 +86,7 @@ def get_brands():
     return all_brends
 @router.get("/{brend}")
 def get_brand(brend: str):
-    brend = brend.title()
+    brend = brend.strip().lower()
     print(brend)
     with open('Output.json', encoding='utf-8') as f:
         file_content = f.read()
@@ -95,7 +95,7 @@ def get_brand(brend: str):
 
         for brands in templates:
 
-            if brands["Марка"] == brend or brend == 'All':
+            if brands["Марка"].strip().lower() == brend or brend == 'All':
 
                 detail.append(brands)
 

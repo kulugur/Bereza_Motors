@@ -2,7 +2,7 @@ import csv
 import json
 data_json = []
 
-with open('sample_export.csv', 'r', encoding='utf-8', newline='')  as csvfile:
+with open('sample_export.csv', 'r',  newline='')  as csvfile:
 
     reader = csv.reader(csvfile)
     key = 0

@@ -76,7 +76,7 @@ def protected_route(user: User = Depends(current_user)):
 origins = [
     "http://127.0.0.1:3000",
     "http://localhost:3000",
-    "http://45.153.189.247:3000",
+    "http://83.222.25.204:3000",
 
 ]
 app.add_middleware(
