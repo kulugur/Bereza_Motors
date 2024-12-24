@@ -105,7 +105,7 @@ export default function  fetcBrend(){
               
                <h3 key={al.ID + 'Price'}>{ al.Цена} Руб</h3>
               <div className='foto'>
-              {al.Фотография.map(foto =>( <Link  key={foto + 'link'} href={foto}><img src={foto} ></img></Link>))}
+              {al.Фотография.map(foto =>( <Link  key={foto + 'link'} href={foto} width="400" height="400"><img src={foto} ></img></Link>))}
               
                 </div> 
               

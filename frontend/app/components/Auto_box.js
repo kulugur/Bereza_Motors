@@ -42,7 +42,7 @@ const Auto_box = () =>{
 			<p>MAZDA</p>
 		</div>
 		<div  className="content_auto">
-		<Link  href={"./brend/MERCEDES"}><img src="img/MERCEDES.png" alt=""width="95" height="100"/></Link>
+		<Link  href={"./brend/Mercedes Benz"}><img src="img/MERCEDES.png" alt=""width="95" height="100"/></Link>
 			
 			<p>MERCEDES</p>
 		</div>

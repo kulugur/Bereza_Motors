@@ -44,8 +44,7 @@ a {
 }
 	
 img {
-  max-width: 100%;
-  max-height: 100%;
+
 
   object-fit: contain; /* Теперь пропорции не нарушаются */
 }	
@@ -383,11 +382,14 @@ img {
 	margin: 0%;
 
    }
-   .detail img{
+   
 	
-    max-height: 95%;
+	.detail img {
+		max-height: 56%;
+		max-width: 100%;
+	}
 
-   }
+
    .profil{
 	color: #f5c209;
 	padding-right: 6%;
@@ -545,6 +547,17 @@ img {
 			padding-right: 0; 
 			color: #dfc741;
 		}	
+		.detail{
+			overflow: hidden;
+			background: azure;
+			display: grid;
+		  align-items: center;
+		  justify-content: center;
+		  height: 100%;
+		  border: solid;
+		  border-radius: 8px;
+		  margin: 0;
+		   }
 }
 .padding_2vh{
 padding-top: 14vh;
