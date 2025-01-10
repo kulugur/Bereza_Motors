@@ -3,6 +3,8 @@
 import Nav_bar from './components/Nav_bar'
 import Auto_box from'./components/Auto_box'
 import MySearchComponent from './components/Serch'
+import Foter from './components/foter'
+
 
 
 
@@ -21,11 +23,11 @@ import MySearchComponent from './components/Serch'
     <Nav_bar/>
  
     </div>
+    
     <MySearchComponent/>
     <Auto_box/>
-    <div className="foter">
-		
-	</div>
+    <Foter/>
+    
   </div>  
     
   )

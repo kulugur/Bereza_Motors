@@ -179,6 +179,9 @@ return(<div className='contener_detal' > {basket &&(<div className='baket_naw'>
              
     
   ) ))}</div> 
+  <div className="foter">
+		
+    </div>
   </div>
 
 )

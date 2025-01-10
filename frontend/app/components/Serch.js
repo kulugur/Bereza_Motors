@@ -58,7 +58,7 @@ return(
         
         <form>
             {res && (console.log(res))}
-            <input className="nav_search search" onChange={hendlerSerch} type="search" name="text"  placeholder="Введите деталь или номер OEM"/>
+            <input className="nav_search search" onChange={hendlerSerch} type="search" name="text"  placeholder="Введите деталь или номер детали"/>
   			
             <div className='serch_res'>{res && (res.map(al =>(<Link href={"./Name_without_use/"+al.ID}
               key={al.ID}  >{al.Наименование +" - "+ al.Модель}</Link>)))}

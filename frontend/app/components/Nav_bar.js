@@ -27,11 +27,14 @@ const Nav_bar = () =>{
         
         <div className="nav_2">
 			<div className="reg">
-				
+        <div className="abaut"><h4><Link   href="/about">О Нас</Link></h4></div>
+        <div className="reg_login">
+        {user && (<h4 className="nav_emai">{user.email}</h4>)}    
 			{user && (<Link  className="reg_btn"href="/profile">Личный кабинет</Link>)}
-      {user && (<h4 className="nav_emai">{user.email}</h4>)}
+      
 			{user == null && (<Link  className="reg_a" href="/registration"><p>Регистрация</p></Link>)}	
 			{user == null && (<Link  className="reg_a" href="/auth"><p>Вход</p></Link>)}
+      </div>
 				
 				
 			</div>
@@ -46,8 +49,23 @@ const Nav_bar = () =>{
   					<input type="submit" name="submit" className="search_btn" value="Найти"/>
 				</form> */}
 			</div>
+          
+          <div className="nav_h1">
+            <div className="bereza_logo"><h1 >Bereza Motors</h1>
+            <img src="img/logo.png" width="200" height="200"></img></div>
+            
             <div>
-				<h2 className="nav_h2">Все марки</h2>
+              <h4>Телефон</h4>
+            <h4>Whatsapp</h4>
+            <h4>Telegram</h4>
+            </div>
+            
+
+          </div>
+            <div className="nav_h2">
+				<h2 >Все марки</h2>
+        
+        
 			</div>
             <div>
 				{/* <form> 

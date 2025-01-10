@@ -55,7 +55,7 @@ img {
 }
 .nav_2{
 	/*background-image: url(../img/nav.png);*/
-	padding-left: 10px;
+	
 	width: 100%;
 	}
 .contener_flex{
@@ -115,10 +115,13 @@ img {
 		
 }
 .reg{
-	float: right;
+	display: flex
+;
+    /* float: right; */
     padding-right: 1%;
     width: 100%;
     background-color: #232e49;
+    justify-content: space-between;
 }
 .reg_a{
 	margin-bottom: 4px;
@@ -129,11 +132,15 @@ img {
     color: #ffffff;
 }
 .reg_a p{
-
+	margin-right: 60px;
     color: #f5d60d;
 } 
+.reg h4{
+	margin-left: 60px;
+	color: #f5d60d;
+}
 .reg_btn{
-
+	width: 200px;
 	float: right;
 	background-color: #f5d60d;
 	border-radius: 6px;
@@ -161,6 +168,7 @@ img {
 }
 
 .nav_search{
+	margin-left: 60px;
 	width: 90%;
 	background-color: #d1bb3396;
 	border-radius: 5px;
@@ -180,7 +188,20 @@ img {
 	padding-top: 4%;
 
 }
+.reg_login{
+	display: flex;
+	align-items: center;
+    justify-content: center;
+}
+.nav_h1{
+	display: flex
+;
+    padding-left: 60px;
+    color: #b39e1c;
+    justify-content: space-evenly;
+}
 .nav_h2{
+	padding-left: 60px;
 	color: #b39e1c;
 }
 .nav_1_a{
@@ -216,7 +237,21 @@ img {
   	
 }
 .foter{
-	height: 100vh;
+	margin-top: 100px;
+	margin-bottom: 500px;
+	background-color: #0000006e;
+    color: #b39e1c;
+    margin-right: 45vh;
+    margin-left: 45vh;
+    display: flex
+;
+height: auto;
+width: auto;
+    border-radius: 7px;
+	
+}
+.foter p{
+	padding-left: 15px;
 	
 }
 
@@ -229,9 +264,12 @@ img {
 	justify-content: center;
 	align-items: center;
 	
-
-
 }
+
+.abaut a{
+	color: #b39e1c;
+}
+
 .login_form{
 	
 	background-image: url(/_next/static/media/rectangel_logo.b3f48e19.png) ;
@@ -371,6 +409,8 @@ img {
   height: 100%;
   border: solid;
   border-radius: 8px;
+  padding-left: 30px;
+	padding-right: 30px;
   margin: 2% 25% 0% 25%;
    }
    .detail h1{
@@ -485,6 +525,14 @@ img {
 	max-height: 6vh;
 
 }
+.bereza_logo{
+	margin-left: 150px;
+}
+.bereza_logo img{
+	z-index: -1;
+    margin-top: -81px;
+    position: absolute;
+}
 .counter__p {
 	padding: 1vh 3vh 0vh 2vh;
 		text-align: center;
@@ -506,14 +554,103 @@ img {
 .sum_p{
 	position: absolute;
 }
+.foto{
+	border-radius: 3px;
+	margin-left: 10vh;
+	width: 350px;
+	background-color: #b39e1c;
+}
 @media(max-width: 992px){
-	/*Стили, на устройствах с максимальной ширеной экрана 992 пикселя и меньше */
+	.foto {
+		border-radius: 3px;
+		/* margin-left: 10vh; */
+		width:200px;
+		background-color: #b39e1c;
+	}
+	.foter {
+		margin-top: 100px;
+		margin-bottom: 500px;
+		background-color: #0000006e;
+		color:#b39e1c;
+		margin-right: 35vh;
+		margin-left: 35vh;
+		display: flex
+	;
+	height: auto;
+	width: auto;
+		border-radius: 7px;
+	}
+	
 	}
 @media(max-width: 768px){
-	/*Стили, на устройствах с максимальной ширеной экрана 768 пикселей и меньше */ 
+	.bereza_logo{
+		margin-left: 80px;
+	}
+	.foto {
+		border-radius: 3px;
+		/* margin-left: 10vh; */
+		width:150px;
+		background-color: #b39e1c;
+	}
+	.foter {
+		margin-top: 100px;
+		margin-bottom: 500px;
+		background-color: #0000006e;
+		color: #b39e1c;
+		margin-right: 20vh;
+		margin-left: 20vh;
+		display: flex
+	;
+	height: auto;
+	width: auto;
+		border-radius: 7px;
+	}
 	}
 	
 @media(max-width: 500px){
+	.bereza_logo{
+		display: none;
+	}
+	.foter {
+		margin-top: 50px;
+		margin-bottom: 500px;
+		background-color: #0000006e;
+		color:#b39e1c;
+		margin-right: 5vh;
+		margin-left: 5vh;
+		display: flex
+	;
+	height: auto;
+	width: auto;
+		border-radius: 7px;
+	}
+	reg_a {
+		/* margin-bottom: 4px; */
+		/* margin-top: 4px; */
+		text-decoration: none;
+		/* float: right; */
+		padding-right: 14%;
+		color: #ffffff;
+	}
+	.reg_login {
+		display: inline-block;
+	}
+	.reg_btn {
+		/* width: 200px; */
+		float: right;
+		background-color: #f5d60d;
+		border-radius: 6px;
+		margin-bottom: 0.5%;
+		/* margin-top: 0.5%; */
+		padding: 5px 5% 5px 5px;
+	}
+	.foto {
+		border-radius: 3px;
+		/* margin-left: 10vh; */
+		width:150px;
+		background-color: #b39e1c;
+	}
+	
 	.exit {
 		position:absolute ;
 		margin: 0;
@@ -559,9 +696,21 @@ img {
 		  margin: 0;
 		   }
 }
+@media(min-width: 800px){
+	.corousel_div{
+		max-width: 400px;
+		
+		padding-left: 33%;
+	}
+	
+}
 .padding_2vh{
 padding-top: 14vh;
 }
-.foto{
-	display: flex;
-}
+
+
+.img-fit {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+  }

@@ -2,6 +2,9 @@
 import { useParams } from 'next/navigation'
 import Link from "next/link"
 import { useState, useEffect } from 'react';
+import Carousel_img from '@/app/components/Carousel_img';
+import Foter from '@/app/components/foter';
+
 
 export default function  fetcBrend(){
   const [brend, setBrend] = useState(null);
@@ -104,8 +107,9 @@ export default function  fetcBrend(){
               <p key={al.ID + 'Product_name' }>{ al.Примечание}</p>
               
                <h3 key={al.ID + 'Price'}>{ al.Цена} Руб</h3>
-              <div className='foto'>
-              {al.Фотография.map(foto =>( <Link  key={foto + 'link'} href={foto} width="400" height="400"><img src={foto} ></img></Link>))}
+              <div className='foto' key={al.ID + 'foto' }>
+              {/* <Link  key={foto + 'link'} href={foto} width="400" height="400"><img src={foto} ></img></Link> */}
+              <Carousel_img url ={al.Фотография}/> 
               
                 </div> 
               
@@ -130,6 +134,7 @@ export default function  fetcBrend(){
                </div> 
       
     ) ))} </div>
+    <Foter/>
     </div>
   )}
            
